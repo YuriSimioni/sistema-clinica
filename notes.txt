@@ -1,0 +1,10 @@
+funcionarios {
+    id
+    nome
+    sobrenome
+    rg
+    cpf
+    telefone
+    cargo
+    
+}
