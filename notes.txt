@@ -1,10 +1,57 @@
-funcionarios {
+user {
     id
-    nome
-    sobrenome
-    rg
-    cpf
-    telefone
-    cargo
-    
+    username
+    password
+    access_level {
+        Admin
+        Moderator
+        Helper
+        Viewer
+    }
+    name
+    surname
+    birth_date
+    Gender {
+        masc
+        fem
+        outro
+    }
+    phone
+    recovery_email
+}
+
+
+
+mails {
+    id
+    author
+    receiver
+    subject
+    wording
+    archive
+    type
+    date_post
+}
+
+/////////////////////
+echo nl2br($row['comentario']);
+exibe com qubra de linhas mysql
+
+
+
+
+###### LER LOGS
+Get-Content "./logs/acess_system.log" -Wait | ForEach-Object {
+    if($_ -match "INFO") {
+        Write-Host $_ -ForegroundColor Blue
+    } elseif($_ -match "WARNING") {
+        Write-Host $_ -ForegroundColor Yellow
+    } elseif($_ -match "ERROR") {
+        Write-Host $_ -ForegroundColor Red
+    } elseif($_ -match "SUCCESS") {
+        Write-Host $_ -ForegroundColor Green
+    }
+    else {
+        Write-Host $_ -ForegroundColor White
+    }
 }

@@ -12,20 +12,43 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 
 
     & #title {
         font-size: 2em;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        & svg {
+            width: 32px;
+            height: 32px;
+        }
     }
-    & .input {
+    & .input-box {
         width: 80%;
         height: auto;
-        padding: 10px;
-        background: rgb(226, 226, 226);
-        border: 2px solid rgb(197, 197, 197);
+        padding: 5px;
+        background: rgb(238, 238, 238);
         border-radius: 4px;
-        font-size: 1em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        border: 1px solid rgb(197, 197, 197);
+        padding: 8px 5px;
+        & .input {
+            width: 100%;
+            height: auto;
+            border: none;
+            background: transparent;
+            padding: 3px;
+            font-size: 1em;
+            outline: none;
+        }
     }
     & .btn {
         width: 70%;
@@ -37,8 +60,40 @@ form {
         border: none;
         font-size: 1em;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        transition: all 200ms ease;
         &:hover {
             background: var(--color1-hover);
         }
     }
+}
+
+#msg {
+    display: none;
+    text-align: center;
+    width: 80vw;
+    height: auto;
+    padding: 20px;
+    background: var(--error);
+    border: 3px solid var(--error-hover);
+    color: white;
+    margin: 30px auto;
+    
+    border-radius: 4px;
+    animation: view .8s ease-out;
+}
+
+@keyframes view {
+    0%{ 
+        opacity: 0;
+        margin-top: -100px;
+    }
+    100%{ 
+        opacity: 1;
+        margin-top: 30px;
+    }
+
 }

@@ -1,0 +1,104 @@
+#container {
+    width: 85vw;
+    height: auto;
+    margin-left: 15vw;
+    padding: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    & #infos-basicas {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+        
+        & h1 {
+            font-size: 2.2em;
+        }
+
+        & .box-card {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            
+            & .card {
+                width: 22%;
+                height: 13vh;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition: all 200ms ease;
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+
+
+
+                &.type.mail {
+                    border-color: var(--color1);
+                    color: var(--color1);
+                    & svg {
+                        fill: var(--color1);
+                    }
+                }
+
+                &.type.notify {
+                    border-color: var(--success);
+                    color: var(--success);
+                    & svg {
+                        fill: var(--success);
+                    }
+                }
+
+                &.type.warning {
+                    border-color: var(--warning);
+                    color: var(--warning);
+                    & svg {
+                        fill: var(--warning);
+                    }
+                }
+
+                &.type.staff {
+                    border-color: var(--staff-color);
+                    color: var(--staff-color);
+                    & svg {
+                        fill: var(--staff-color);
+                    }
+                }
+
+
+                & svg {
+                    width: 36px;
+                    height: 36px;
+                    fill: black;
+                }
+
+                & div {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                    
+                    & .result {
+                        font-size: 2em
+                    };
+                }
+                
+            
+            
+            }
+        }
+    }    
+}

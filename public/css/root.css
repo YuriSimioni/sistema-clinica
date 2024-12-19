@@ -4,10 +4,18 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: "Nunito";
 }
 
 :root {
-    --color1: #185cb4;
-    --color1-hover: #154f9c;
+    --color1:#2a40be;
+    --color1-hover: #1e2e88;
+    
+
+    --error: rgb(235, 113, 113);
+    --error-hover: rgb(214, 94, 94);
+    --warning: rgb(243, 149, 41);
+    --success: rgb(68, 219, 80);
+
+    --staff-color: #881ae2;
 }
